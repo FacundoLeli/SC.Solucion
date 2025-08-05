@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SC.Solucion | Servicios Profesionales</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css"> </head>
+<body>
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-tools text-white text-xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-gray-800">SC.<span class="text-blue-500">Solucion</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="nav-link text-gray-700 hover:text-blue-500">Inicio</a>
+                <a href="#servicios" class="nav-link text-gray-700 hover:text-blue-500">Servicios</a>
+                <a href="#sobre-nosotros" class="nav-link text-gray-700 hover:text-blue-500">Nosotros</a>
+                <a href="#testimonios" class="nav-link text-gray-700 hover:text-blue-500">Testimonios</a>
+                <a href="#contacto" class="nav-link text-gray-700 hover:text-blue-500">Contacto</a>
+            </nav>
+            <button class="md:hidden text-gray-700" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div class="md:hidden hidden bg-white shadow-lg" id="mobile-menu">
+            <div class="px-4 py-2 space-y-3">
+                <a href="#inicio" class="block py-2 text-gray-700 hover:text-blue-500">Inicio</a>
+                <a href="#servicios" class="block py-2 text-gray-700 hover:text-blue-500">Servicios</a>
+                <a href="#sobre-nosotros" class="block py-2 text-gray-700 hover:text-blue-500">Nosotros</a>
+                <a href="#testimonios" class="block py-2 text-gray-700 hover:text-blue-500">Testimonios</a>
+                <a href="#contacto" class="block py-2 text-gray-700 hover:text-blue-500">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero flex items-center" id="inicio">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Soluciones profesionales para tu hogar y empresa</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Más de 15 años resolviendo problemas con calidad, rapidez y garantía</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contacto" class="btn-primary bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold">Solicitar presupuesto</a>
+                <a href="#servicios" class="bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md">Nuestros servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50" id="servicios">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Nuestros Servicios</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/38e0cbae-c34c-4d60-800c-d7f67b6b7a76.png" alt="Albañil profesional trabajando en construcción de pared con ladrillos" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <i class="fas fa-hammer text-blue-500 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Albañilería</h3>
+                        <p class="text-gray-600 mb-4">Construcción, remodelaciones, reparaciones estructurales, techos, pisos y más. Soluciones integrales para tu hogar o negocio.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Construcciones nuevas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Remodelaciones completas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Reparaciones estructurales</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/796bb4ae-58e1-4e14-8268-b8b4ad322fda.png" alt="Fontanero reparando tuberías debajo de un fregadero de cocina con herramientas profesionales" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <i class="fas fa-faucet text-blue-500 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Plomería</h3>
+                        <p class="text-gray-600 mb-4">Instalación y reparación de tuberías, baños, cocinas, sistema de calefacción y más. Soluciones rápidas y eficientes.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Reparación de fugas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Instalaciones sanitarias</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Mantenimiento preventivo</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/af756b0b-fc5b-4b76-a65e-e68446ea4584.png" alt="Electricista trabajando en panel de circuito con herramientas eléctricas y cables coloridos" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <i class="fas fa-bolt text-blue-500 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Electricista Matriculado</h3>
+                        <p class="text-gray-600 mb-4">Instalaciones eléctricas, reparaciones urgentes, mantenimiento preventivo y soluciones energéticas para tu espacio.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Instalaciones eléctricas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Reparaciones urgentes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Paneles solares</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8202413b-396b-4991-888b-c377b636d3af.png" alt="Técnico gasista verificando calentador con detector de fugas en cocina moderna" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <i class="fas fa-fire text-blue-500 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Gasista Matriculado</h3>
+                        <p class="text-gray-600 mb-4">Instalación y mantenimiento de gas, certificaciones, reparaciones seguras y conformes a normativas vigentes.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Certificaciones de instalaciones</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Detección y reparación de fugas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Instalación de artefactos</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1c162b09-adf8-4826-8826-1a40f9ab134d.png" alt="Sistema de seguridad moderno con cámaras y panel de control en pared de oficina" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <i class="fas fa-shield-alt text-blue-500 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Seguridad Electrónica</h3>
+                        <p class="text-gray-600 mb-4">Alarmas, cámaras de seguridad y sistemas de vigilancia para proteger lo que más te importa.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Sistemas de alarma completos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Cámaras de vigilancia HD</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Monitoreo 24/7</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1e776647-827c-423d-acac-19cf372b6a55.png" alt="Técnico instalando cable de fibra óptica en poste mientras verifica conexión" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <i class="fas fa-wifi text-blue-500 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Telecomunicaciones</h3>
+                        <p class="text-gray-600 mb-4">Conexión de fibra óptica, internet satelital y soluciones de conectividad para tu hogar o negocio.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Instalación de fibra óptica</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Internet satelital</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                <span>Redes empresariales</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white" id="sobre-nosotros">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Profesional trabajando con herramientas representando servicios técnicos" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Nuestra Historia</h2>
+                    <p class="text-gray-600 mb-6">Fundada en 2008, SC.Solucion nació con el propósito de ofrecer servicios profesionales de calidad en múltiples rubros. Lo que comenzó como un pequeño equipo de profesionales hoy se ha convertido en una empresa líder en el sector.</p>
+                    <p class="text-gray-600 mb-6">Nuestro compromiso en SC.Solucion es brindar soluciones efectivas, con personal calificado y atención personalizada a cada cliente. Más de 500 clientes satisfechos avalan nuestra trayectoria.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-medal text-blue-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">15+ Años</h3>
+                                <p class="text-gray-600">de experiencia en el mercado</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-users text-blue-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">500+</h3>
+                                <p class="text-gray-600">clientes satisfechos</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-hard-hat text-blue-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">30+</h3>
+                                <p class="text-gray-600">profesionales calificados</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clipboard-check text-blue-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">100%</h3>
+                                <p class="text-gray-600">trabajos garantizados</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contacto" class="btn-primary inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold">Contactar ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50" id="testimonios">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Lo que dicen nuestros clientes</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="rounded-full overflow-hidden w-12 h-12 mr-4 bg-blue-100">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7854d17c-1f96-47f3-b554-0c57c65b41ba.png" alt="Foto de Carlos Montero" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Carlos Montero</h4>
+                            <p class="text-gray-500 text-sm">Residencial Las Palmas</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-600 mb-4">
+                        <i class="fas fa-quote-left text-blue-200 mr-2"></i>
+                        Contraté a SC.Solucion para una remodelación completa de mi casa y quedé impresionado con la calidad del trabajo y la atención al detalle. Recomendados 100%.
+                        <i class="fas fa-quote-right text-blue-200 ml-2"></i>
+                    </div>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="rounded-full overflow-hidden w-12 h-12 mr-4 bg-blue-100">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7d5c737f-efa1-403b-89c1-5d9b89d1718e.png" alt="Foto de María González" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">María González</h4>
+                            <p class="text-gray-500 text-sm">Cafetería Dulce Aroma</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-600 mb-4">
+                        <i class="fas fa-quote-left text-blue-200 mr-2"></i>
+                        Necesitábamos urgentemente reparar las instalaciones eléctricas de nuestro negocio. Llegaron en menos de una hora y solucionaron el problema con profesionalismo. Excelente servicio!
+                        <i class="fas fa-quote-right text-blue-200 ml-2"></i>
+                    </div>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="rounded-full overflow-hidden w-12 h-12 mr-4 bg-blue-100">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f9677762-732f-4979-920e-97275f5d1dff.png" alt="Foto de Roberto Sánchez" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Roberto Sánchez</h4>
+                            <p class="text-gray-500 text-sm">Edificio San Martín</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-600 mb-4">
+                        <i class="fas fa-quote-left text-blue-200 mr-2"></i>
+                        Hemos contratado sus servicios de seguridad para nuestro edificio y la diferencia es notable. El sistema de cámaras y alarmas funciona perfectamente. Muy contentos con los resultados.
+                        <i class="fas fa-quote-right text-blue-200 ml-2"></i>
+                    </div>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white" id="contacto">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Contáctanos</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Nombre</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2">Teléfono</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-gray-700 mb-2">Servicio requerido</label>
+                            <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Seleccione un servicio</option>
+                                <option value="albañileria">Albañilería</option>
+                                <option value="plomeria">Plomería</option>
+                                <option value="electricidad">Electricista Matriculado</option>
+                                <option value="gasista">Gasista Matriculado</option>
+                                <option value="seguridad">Seguridad Electrónica</option>
+                                <option value="telecom">Telecomunicaciones</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Mensaje</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold">Enviar mensaje</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Información de contacto</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Dirección</h4>
+                                    <p class="text-gray-600">Av. Principal 1234, Local 5<br>Ciudad, Provincia</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Teléfono</h4>
+                                    <p class="text-gray-600">+54 11 1234-5678<br>Lunes a Viernes: 8am - 6pm</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <p class="text-gray-600">info@solucionesintegrales.com<br>soporte@solucionesintegrales.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Horarios de atención</h4>
+                                    <p class="text-gray-600">Lunes a Viernes: 8am - 6pm<br>Sábados: 9am - 1pm<br>Emergencias: 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Síguenos en redes sociales</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-500 text-white p-3 rounded-full w-10 h-10 flex items-center justify-center">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-blue-400 text-white p-3 rounded-full w-10 h-10 flex items-center justify-center">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-pink-500 text-white p-3 rounded-full w-10 h-10 flex items-center justify-center">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-blue-600 text-white p-3 rounded-full w-10 h-10 flex items-center justify-center">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="h-96 w-full bg-gray-200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.748380482811!2d-58.41217088470539!3d-34.61183108044719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb29a279092d%3A0x6a5e1e1a2f0e0e0!2sObelisco!5e0!3m2!1ses-419!2sar!4v1700000000000!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">SC.Solucion</h3>
+                    <p class="text-gray-400">Más de 15 años brindando soluciones profesionales en múltiples rubros con calidad, garantía y atención personalizada.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Albañilería</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Plomería</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Electricista Matriculado</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Gasista</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Seguridad</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Telecomunicaciones</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Enlaces rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white">Inicio</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-white">Servicios</a></li>
+                        <li><a href="#sobre-nosotros" class="text-gray-400 hover:text-white">Nosotros</a></li>
+                        <li><a href="#testimonios" class="text-gray-400 hover:text-white">Testimonios</a></li>
+                        <li><a href="#contacto" class="text-gray-400 hover:text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-2 mt-1"></i>
+                            <span>Av. Principal 1234, Local 5</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mr-2 mt-1"></i>
+                            <span>+54 11 1234-5678</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mr-2 mt-1"></i>
+                            <span>info@solucionesintegrales.com</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 SC.Solucion. Todos los derechos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Términos y condiciones</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Política de privacidad</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/541112345678" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all">
+        <i class="fab fa-whatsapp text-2xl"></i>
+        <span class="sr-only">Contactar por WhatsApp</span>
+    </a>
+
+    <script src="js/script.js"></script> </body>
+</html>

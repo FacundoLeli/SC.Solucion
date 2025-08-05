@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flyer SC.Solución</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      color: #333;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      font-weight: bold;
+    }
+    header h1 .sc {
+      color: #000000;
+    }
+    header h1 .solucion {
+      color: #007BFF;
+    }
+    header p {
+      color: #000000;
+      font-size: 1.2rem;
+      margin: 5px 0 20px;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #007BFF;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .service {
+      background: #ecf0f1;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+      cursor: default;
+    }
+    .service:hover {
+      background: #d6eaf8;
+    }
+    .service img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    .service h3 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+      color: #2c3e50;
+    }
+    .service p {
+      font-size: 1rem;
+      color: #555;
+      margin: 0 auto;
+      max-width: 180px;
+    }
+    .cta {
+      text-align: center;
+      font-size: 1.6rem;
+      color: #007BFF;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .contact {
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #000000;
+      margin-bottom: 10px;
+      page-break-inside: avoid; /* Evita salto de página dentro */
+    }
+    .contact .whatsapp {
+      font-size: 1.6rem;
+      color: #25D366;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .qr-code {
+      text-align: center;
+      margin-top: 10px;
+      page-break-inside: avoid; /* Evita salto de página dentro */
+    }
+    .qr-code img {
+      width: 120px;
+      height: 120px;
+    }
+    @media (max-width: 700px) {
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 450px) {
+      .services {
+        grid-template-columns: 1fr;
+      }
+      .service p {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><span class="sc">SC.</span><span class="solucion">Solución</span></h1>
+    <p>¡Expertos en Servicios para tu Hogar y Negocio!</p>
+  </header>
+
+  <div class="highlight">
+    15+ Años de Experiencia | Calidad Garantizada | Atención Rápida
+  </div>
+
+  <section class="services">
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/50/000000/hammer.png" alt="Martillo" />
+      <h3>Albañilería</h3>
+      <p>Construcción, Remodelaciones, Reparaciones.</p>
+    </div>
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/50/000000/water.png" alt="Grifo" />
+      <h3>Plomería</h3>
+      <p>Fugas, Instalaciones, Termotanques.</p>
+    </div>
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/50/000000/lightning-bolt.png" alt="Rayo" />
+      <h3>Electricista Matriculado</h3>
+      <p>Instalaciones, Urgencias, Seguridad Eléctrica.</p>
+    </div>
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/50/000000/gas.png" alt="Gasista" />
+      <h3>Gasista Matriculado</h3>
+      <p>Instalaciones, Certificaciones, Fugas.</p>
+    </div>
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/50/000000/security-checked.png" alt="Escudo de Seguridad" />
+      <h3>Seguridad Electrónica</h3>
+      <p>Alarmas, Cámaras, Vigilancia.</p>
+    </div>
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/50/000000/wifi.png" alt="WiFi" />
+      <h3>Telecomunicaciones</h3>
+      <p>Redes, Fibra Óptica, Internet.</p>
+    </div>
+  </section>
+
+  <div class="cta">
+    ¡CONTACTANOS HOY!<br />
+    Presupuesto SIN CARGO.<br />
+    Servicio de Emergencias 24/7.
+  </div>
+
+  <section class="contact">
+    <div class="whatsapp">WhatsApp: +54 11 1234-5678</div>
+    <div>Web: www.scsolucion.com</div>
+    <div>Email: info@scsolucion.com</div>
+    <div>Dirección: Av. Principal 1234, Florencio Varela, Bs. As.</div>
+  </section>
+
+  <div class="qr-code">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://wa.me/541112345678&size=150x150" alt="QR Code para WhatsApp" />
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+/* Variables CSS para colores principales. Útiles para mantener consistencia. */
+:root {
+    --primary: #2c3e50;    /* Color principal (ej. azul oscuro/gris) */
+    --secondary: #3498db;  /* Color secundario (ej. azul vibrante) */
+    --accent: #e74c3c;     /* Color de acento (ej. rojo/naranja) */
+}
+
+/* Estilos globales para el cuerpo de la página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente del texto */
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces internos */
+}
+
+/* Estilos específicos para la sección Hero (primera sección de la página) */
+.hero {
+    /* Fondo con gradiente oscuro y una imagen. Puedes cambiar la URL de la imagen. */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/10fedf5a-6108-4be1-9309-015f7912144f.png') no-repeat center center/cover;
+    height: 80vh; /* Altura del 80% del viewport */
+}
+
+/* Efecto hover para las tarjetas de servicio */
+.service-card:hover {
+    transform: translateY(-10px); /* Ligeramente hacia arriba */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2); /* Sombra más pronunciada */
+}
+
+/* Transición para las tarjetas de testimonios */
+.testimonial-card {
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}
+
+/* Efecto hover para las tarjetas de testimonios */
+.testimonial-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Sombra al pasar el mouse */
+}
+
+/* Estilo para el subrayado animado en los enlaces de navegación */
+.nav-link::after {
+    content: '';        /* Contenido vacío para crear el pseudo-elemento */
+    display: block;     /* Hace que el pseudo-elemento sea un bloque para ocupar espacio */
+    width: 0;           /* Ancho inicial de 0 para la animación */
+    height: 2px;        /* Grosor del subrayado */
+    background: var(--secondary); /* Color del subrayado usando la variable secundaria */
+    transition: width .3s; /* Transición suave del ancho */
+}
+
+/* Expande el subrayado cuando el mouse pasa sobre el enlace */
+.nav-link:hover::after {
+    width: 100%; /* Ancho completo al hacer hover */
+}
+
+/* Transición general para los botones primarios */
+.btn-primary {
+    transition: all 0.3s ease; /* Transición suave para los efectos hover */
+}
+
+/* Efecto hover para los botones primarios */
+.btn-primary:hover {
+    background: var(--primary); /* Cambia el color de fondo a la variable primaria */
+    transform: translateY(-3px); /* Ligeramente hacia arriba */
+}
+
+/* Animación de pulsación para las tarjetas de servicio */
+/* Esta animación se activa con JavaScript cuando se hace scroll a la sección de servicios */
+@keyframes pulse-once {
+    0% { transform: scale(1); } /* Estado inicial, tamaño normal */
+    50% { transform: scale(1.03); } /* Se agranda ligeramente */
+    100% { transform: scale(1); } /* Vuelve a su tamaño normal */
+}
+
+.animate-pulse {
+    animation: pulse-once 1s ease-in-out; /* Aplica la animación 'pulse-once' por 1 segundo */
+}
