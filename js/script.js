@@ -19,10 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Verifica que el formulario exista.
     if (contactForm) {
+        // *** CAMBIO CLAVE AQUÍ: Hemos eliminado e.preventDefault(); ***
+        // Ahora el formulario se enviará de forma nativa a la URL de FormSubmit.co
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Evita el comportamiento predeterminado del formulario (recargar la página).
-            alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.'); // Muestra un mensaje al usuario.
-            this.reset(); // Reinicia (borra) los campos del formulario.
+            // FormSubmit.co maneja la redirección a una página de "Gracias" por defecto.
+            // Si quieres un mensaje personalizado sin redirigir, necesitaríamos usar fetch en lugar de la acción nativa.
+            // Por ahora, para que funcione con FormSubmit.co directamente, simplemente permitimos el envío.
+            
+            // Opcionalmente, puedes resetear el formulario después de un pequeño retraso,
+            // pero FormSubmit.co ya redirige a una página de éxito por defecto.
+            // Si no quieres la redirección de FormSubmit.co, necesitarías un enfoque diferente (usando fetch).
+            // this.reset(); // Si lo dejas, se reseteará antes de la redirección de FormSubmit.co
         });
     }
 
